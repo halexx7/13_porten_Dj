@@ -1,0 +1,210 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+    <!-- Content -->
+    <!-- Intro -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro__body">
+    
+                <div class="intro__item">
+                    <img class="intro__img" src="{% static 'img/intro__logo.png' %}" alt="logo">
+                </div>
+    
+                <p class="intro__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis. Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi. Tortor nibh magna feugiat id nunc, dui nisl viverra.</p>
+    
+            </div><!-- ./intro__body -->
+        </div><!-- ./container -->
+    </div><!-- ./intro -->
+    
+    
+    <!-- New session -->
+    <div class="new-session">
+        <div class="wrapper">
+            <div class="new-session__body">
+                <div class="row">
+    
+                    <div class="col-lg-7  new-session__left">
+                    <h2 class="title-section  new-session__title">СЕЗОН 2020/21</h2>
+                    <div class="row  new-session__card-box">
+                        
+                        {% for product in products_new %}
+                        <div class="col-lg-4  card__item">
+                            <div class="card__img">
+                                <a href="{{ product.image_href }}"></a>
+                                <img class="img  card__watch" src="{% static 'img/product/' %}{{ product.image_src }}" alt="{{ product.name }}" >
+                            </div>
+                            <h3 class="card__subtitle">{{ product.name }}</h3>
+                            <p class="card__text">{{ product.price }}</p>
+                        </div>
+                        {% endfor %}
+    
+                    </div><!-- ./row -->
+                </div><!-- ./new-session__left -->
+    
+                <div class="col-lg-5  new-session__right">
+    
+                    <h2 class="title-section  new-session__title">Новая коллекция</h2>
+                    <div class="btn  btn-session">
+                        <a href="#" class="new-session__btn">Каталог</a>
+                    </div>
+    
+                </div><!-- ./new-session__right -->
+    
+                </div><!-- ./row -->
+    
+            </div><!-- ./new-session__body -->
+        </div><!-- ./wrapper -->
+    </div><!-- ./new-session -->
+    
+    
+    <!-- Collection Old -->
+    <div class="old-collection">
+        <div class="wrapper">
+    
+            <div class="old-collection__body">
+                <div class="row">
+    
+                    <div class="col-lg-5  old-collection__left">Left block</div>
+    
+                    <div class="col-lg-7  old-collection__rigth">
+    
+                        <h2 class="title-section  old-collection__title">коллекция 2018</h2>
+                        <div class="old-collection__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </div>
+                        <div class="btn  btn-collection">
+                            <a href="#" class="old-collection__btn">посмотреть коллекцию</a>
+                        </div>
+    
+                    </div>
+    
+                </div><!-- ./row -->
+            </div><!-- ./old-collection__body -->
+    
+        </div><!-- ./wrapper -->
+    </div><!-- ./old-collection -->
+    
+    
+    <!-- New Products -->
+    <div class="products">
+        <div class="wrapper">
+    
+            <div class="products__body">
+    
+                <h2 class="title-section  products__title">новые поступления</h2>
+    
+                <div class="products__content">
+    
+                    <div class="row  products__row">
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                    </div><!-- ./row -->
+    
+                    <div class="row  mt-5  products__row">
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                        <div class="col-lg-3  card__item">
+                            <div class="card__img">
+                                <img class="img  card__watch" src="{% static 'img/new-session-item.png' %}" alt="watch" >
+                            </div>
+                            <h3 class="card__subtitle">Louis XVI ATHOS</h3>
+                            <p class="card__text">165 000 руб.</p>
+                        </div>
+    
+                    </div><!-- ./row -->
+    
+                </div>
+    
+            </div><!-- ./products__body -->
+    
+        </div><!-- ./wrapper -->
+    </div><!-- ./products -->
+    
+    
+    <!-- Brands -->
+    <div class="brands">
+        <div class="wrapper">
+    
+            <div class="brands__body">
+    
+                <h2 class="title-section  brands__title">наши бренды</h2>
+    
+                <div class="row  brands__row">
+    
+                    <div class="col-lg-3">
+                        <img class="img  brands__img" src="{% static 'img/brand_coco.png' %}" alt="brands-coco">
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img  brands__img" src="{% static 'img/brand_coco.png' %}" alt="brands-coco">
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img  brands__img" src="{% static 'img/brand_coco.png' %}" alt="brands-coco">
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="img  brands__img" src="{% static 'img/brand_coco.png' %}" alt="brands-coco">
+                    </div>
+    
+                </div><!-- ./brands__row -->
+    
+            </div><!-- ./brands__body -->
+    
+        </div><!-- ./wrapper -->
+    </div><!-- ./brands -->
+
+{% endblock content %}
