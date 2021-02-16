@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+
+        <div class="header__body">
+
+            <div class="row">
+                <div class="col-lg-6  d-flex  align-items-center">
+                    <a href="/" class="header__logo">
+                        <img src="{% static 'img/PORTEN.svg' %}" alt="logo" class="header__logo-img">
+                    </a>
+                </div>
+                <div class="col-lg-6  d-flex  justify-content-end">
+                    <nav class="header__nav">
+                        <div class="nav__item  {% if request.resolver_match.url_name == 'main' %}activ{% endif %}">
+                            <a  class="nav__link" href="{% url 'main' %}">Главная</a>
+                        </div>
+                        <div class="nav__item  {% if request.resolver_match.url_name == 'product' %}activ{% endif %}">
+                            <a class="nav__link" href="{% url 'product' %}">Продукты</a>
+                        </div>
+                        <div class="nav__item  {% if request.resolver_match.url_name == 'contacts' %}activ{% endif %}">
+                            <a class="nav__link" href="{% url 'contacts' %}">Контакты</a>
+                        </div>
+                    </nav>
+
+                    <div class="header__basket">
+                        <a href="#" class="basket__link">
+                            <img src="{% static 'img/bx_bx-cart.svg' %}" alt="basket" class="basket__icon">
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <a href="#" class="search__link">
+                            <img class="search__icon" src="{% static 'img/gridicons_search.svg' %}" alt="search">
+                        </a>
+                    </div>
+                </div>
+            </div><!-- ./row -->
+
+        </div><!-- ./header__body -->
+
+    </div>
+</header>
